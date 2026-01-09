@@ -94,35 +94,119 @@ This architecture eliminates IPC overhead by sharing core logic directly between
 
 ## Installation
 
-### From Homebrew (Recommended)
+Scholar is a **pure plugin** with no MCP server dependencies. It works immediately after installation in both Claude Code CLI and Claude Desktop app.
+
+### Option 1: Homebrew (Recommended - macOS)
 
 ```bash
+# Add the Data-Wise tap
 brew tap data-wise/tap
+
+# Install scholar plugin
 brew install scholar
 ```
 
-### From Source (Development)
+The Homebrew formula automatically:
+- Installs the plugin to `~/.claude/plugins/scholar`
+- Makes it available in Claude Code CLI and Claude Desktop
+- No additional configuration needed
+
+### Option 2: Manual Installation (Local Development)
+
+**For Claude Code CLI and Claude Desktop:**
 
 ```bash
-# Navigate to scholar repository
-cd ~/projects/dev-tools/scholar
+# Clone the repository
+git clone https://github.com/Data-Wise/scholar.git
+cd scholar
 
 # Install in development mode (symlink - changes reflected immediately)
 ./scripts/install.sh --dev
 
-# Or install in production mode (copy)
+# Or install in production mode (copy - stable)
 ./scripts/install.sh
+```
+
+**Installation locations:**
+- Plugin directory: `~/.claude/plugins/scholar`
+- Commands: `~/.claude/plugins/scholar/src/plugin-api/commands/`
+- Skills: `~/.claude/plugins/scholar/src/plugin-api/skills/`
+- Shell APIs: `~/.claude/plugins/scholar/lib/`
+
+### Option 3: npm (Future - Not yet published)
+
+```bash
+# When published to npm (future release):
+npm install -g @data-wise/scholar
+scholar-install  # Installs plugin to ~/.claude/plugins/
 ```
 
 ### Verify Installation
 
 ```bash
-# Check plugin is installed
+# Check plugin directory exists
 ls -la ~/.claude/plugins/scholar
 
-# Run tests
+# Verify plugin.json
+cat ~/.claude/plugins/scholar/.claude-plugin/plugin.json
+
+# Run test suite (if installed from source)
+cd ~/projects/dev-tools/scholar
 ./tests/test-plugin-structure.sh
 ```
+
+**Expected output:**
+```
+✅ All tests passed (10/10)
+- Plugin structure valid
+- 21 commands present
+- 17 skills present
+- No hardcoded paths
+```
+
+### Using in Claude Code CLI
+
+After installation, commands are immediately available:
+
+```bash
+# Start Claude Code in any directory
+claude
+
+# Use scholar commands
+/arxiv "bootstrap mediation"
+/teaching:syllabus "Statistics 101"
+/doi "10.1037/met0000165"
+```
+
+### Using in Claude Desktop App
+
+Scholar automatically loads when you open Claude Desktop. Commands work the same way:
+
+1. Open Claude Desktop app
+2. Start a new conversation
+3. Use slash commands: `/arxiv`, `/teaching:syllabus`, etc.
+
+### MCP Server Setup
+
+**Scholar does NOT require any MCP server configuration.**
+
+Unlike plugins like rforge that depend on MCP servers, Scholar uses shell-based API wrappers (`lib/arxiv-api.sh`, `lib/crossref-api.sh`, `lib/bibtex-utils.sh`) for external services.
+
+**Benefits of pure plugin approach:**
+- ✅ Faster startup (no IPC overhead)
+- ✅ Simpler installation (no server configuration)
+- ✅ More portable (works anywhere Claude Code/Desktop runs)
+- ✅ Self-contained (all dependencies included)
+
+**Future MCP integration (Phase 2):**
+In a future release, Scholar may optionally integrate with an MCP server for advanced features like:
+- R execution for statistical analysis
+- Zotero library integration
+- LaTeX compilation
+
+This will be **optional** - all current commands will continue to work without MCP.
+
+See [MCP-MIGRATION.md](MCP-MIGRATION.md) for details.
 
 ---
 
