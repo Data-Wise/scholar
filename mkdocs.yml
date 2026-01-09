@@ -1,0 +1,75 @@
+site_name: Scholar Plugin
+site_description: Academic workflows for research and teaching - 21 commands for literature management, manuscript writing, simulation studies, and course material generation
+site_url: https://data-wise.github.io/scholar/
+
+repo_name: Data-Wise/scholar
+repo_url: https://github.com/Data-Wise/scholar
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - 🚀 Quick Start: docs/QUICK-START.md
+  - 📚 Reference Card: docs/REFCARD.md
+  - Commands:
+      - Overview: docs/commands.md
+      - Literature Management: docs/commands.md#literature-management
+      - Manuscript Writing: docs/commands.md#manuscript-writing
+      - Simulation Studies: docs/commands.md#simulation-studies
+      - Research Planning: docs/commands.md#research-planning
+      - Teaching: docs/commands.md#teaching
+  - Skills: docs/skills.md
+  - API Wrappers: docs/api-wrappers.md
+  - Examples: docs/examples.md
