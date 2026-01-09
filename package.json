@@ -1,0 +1,61 @@
+{
+  "name": "@data-wise/scholar",
+  "version": "1.0.0",
+  "description": "Academic workflows for research and teaching - 21 commands for literature management, manuscript writing, simulation studies, and course material generation",
+  "main": "src/plugin-api/commands/index.js",
+  "type": "module",
+  "keywords": [
+    "claude-code",
+    "claude-plugin",
+    "academic",
+    "research",
+    "teaching",
+    "literature-search",
+    "manuscript-writing",
+    "simulation-studies",
+    "course-materials",
+    "arxiv",
+    "bibtex",
+    "syllabus",
+    "quiz",
+    "exam",
+    "grading-rubric"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Data-Wise/scholar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Data-Wise/scholar/issues"
+  },
+  "homepage": "https://github.com/Data-Wise/scholar#readme",
+  "author": {
+    "name": "Data-Wise",
+    "email": "dt@stat-wise.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "bash tests/test-plugin-structure.sh",
+    "install-plugin": "./scripts/install.sh",
+    "install-plugin-dev": "./scripts/install.sh --dev",
+    "uninstall-plugin": "./scripts/uninstall.sh"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    ".claude-plugin/",
+    "src/",
+    "lib/",
+    "scripts/",
+    "tests/",
+    "docs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

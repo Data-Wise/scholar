@@ -171,9 +171,11 @@ This documentation follows **ADHD-friendly principles**:
 
 ## 🔗 External Links
 
-- **Plugin Repository:** https://github.com/Data-Wise/claude-plugins
-- **Monorepo Documentation:** [../../KNOWLEDGE.md](../../KNOWLEDGE.md)
-- **Plugin Development Guide:** [../../docs/PLUGIN-DEVELOPMENT.md](../../docs/PLUGIN-DEVELOPMENT.md)
+- **Plugin Repository:** https://github.com/Data-Wise/scholar
+- **Issues & Support:** https://github.com/Data-Wise/scholar/issues
+- **Related Projects:**
+  - [craft](https://github.com/Data-Wise/craft) - Full-stack developer toolkit
+  - [claude-plugins](https://github.com/Data-Wise/claude-plugins) - Shared tooling and standards
 
 ---
 

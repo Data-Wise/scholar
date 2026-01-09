@@ -128,13 +128,13 @@ Skills activate automatically when you're working on relevant tasks:
 **Private Installation (Personal Use):**
 
 ```bash
-cd ~/projects/dev-tools/claude-plugins/statistical-research
+cd ~/projects/dev-tools/scholar
 
 # Development mode (recommended)
-./install-private.sh --dev
+./scripts/install.sh --dev
 
 # Production mode
-./install-private.sh
+./scripts/install.sh
 ```
 
 **Uninstall:**
@@ -183,7 +183,7 @@ statistical-research/
 
 - **Installation Guide:** `INSTALL-PRIVATE.md`
 - **Main README:** `README.md`
-- **Plugin Repository:** https://github.com/Data-Wise/claude-plugins
+- **Plugin Repository:** https://github.com/Data-Wise/scholar
 - **Skills Guide:** `skills/README.md`
 
 ---

@@ -1,4 +1,4 @@
-# Statistical Research Plugin - Quick Start
+# Scholar Plugin - Quick Start
 
 > **Get up and running in 5 minutes**
 
@@ -8,10 +8,10 @@
 
 ```bash
 # Navigate to plugin directory
-cd ~/projects/dev-tools/claude-plugins/statistical-research
+cd ~/projects/dev-tools/scholar
 
 # Install in development mode (changes apply immediately)
-./install-private.sh --dev
+./scripts/install.sh --dev
 ```
 
 **Done!** The plugin is now available in Claude Code.
@@ -166,15 +166,15 @@ See full list: `docs/REFCARD.md`
 - **Full command list:** See `docs/REFCARD.md`
 - **Installation details:** See `INSTALL-PRIVATE.md`
 - **All skills:** See `skills/README.md`
-- **Plugin source:** https://github.com/Data-Wise/claude-plugins
+- **Plugin source:** https://github.com/Data-Wise/scholar
 
 ---
 
 ## Uninstall
 
 ```bash
-cd ~/projects/dev-tools/claude-plugins/statistical-research
-./uninstall-private.sh
+cd ~/projects/dev-tools/scholar
+./scripts/uninstall.sh
 ```
 
 ---

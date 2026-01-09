@@ -5,7 +5,7 @@
 A comprehensive Claude Code plugin for academic workflows combining research and teaching. Features unified Plugin + MCP architecture with 21 slash commands and research skills.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/Data-Wise/claude-plugins)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/Data-Wise/scholar)
 
 ---
 
@@ -94,11 +94,18 @@ This architecture eliminates IPC overhead by sharing core logic directly between
 
 ## Installation
 
+### From Homebrew (Recommended)
+
+```bash
+brew tap data-wise/tap
+brew install scholar
+```
+
 ### From Source (Development)
 
 ```bash
-# Navigate to claude-plugins monorepo
-cd ~/projects/dev-tools/claude-plugins/scholar
+# Navigate to scholar repository
+cd ~/projects/dev-tools/scholar
 
 # Install in development mode (symlink - changes reflected immediately)
 ./scripts/install.sh --dev
@@ -493,24 +500,31 @@ Implementation details for Claude...
 - [ ] Test MCP server independently
 - [ ] Integrate with Claude Desktop app
 
-### Phase 3: Teaching Expansion (Future)
-- [ ] Additional teaching commands (lecture, exam, feedback)
-- [ ] LMS integration (Canvas, Blackboard)
-- [ ] Export to PDF/Word formats
-- [ ] Calendar integration
+### Phase 3: Teaching Expansion (Complete)
+- ✅ Additional teaching commands (slides, quiz, exam, feedback)
+- ✅ Comprehensive teaching workflows
+- ✅ Total: 7 teaching commands
+- [ ] LMS integration (Canvas, Blackboard) - Future
+- [ ] Export to PDF/Word formats - Future
+- [ ] Calendar integration - Future
 
 ---
 
 ## Contributing
 
-This plugin is part of the [claude-plugins monorepo](https://github.com/Data-Wise/claude-plugins). See the main repository for contribution guidelines.
+Contributions are welcome! This is a standalone project focused on academic workflows.
 
 **Development workflow:**
-1. Fork the repository
-2. Create a feature branch
-3. Make changes in `scholar/` directory
+1. Fork the repository: https://github.com/Data-Wise/scholar
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Make your changes
 4. Run tests: `./tests/test-plugin-structure.sh`
-5. Submit pull request
+5. Commit with clear messages
+6. Push and submit a pull request
+
+**See also:**
+- [claude-plugins monorepo](https://github.com/Data-Wise/claude-plugins) for shared tooling and standards
+- [craft](https://github.com/Data-Wise/craft) and [rforge](https://github.com/Data-Wise/claude-plugins/tree/main/rforge) - Related projects
 
 ---
 
@@ -522,18 +536,21 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## Support
 
-- **Issues:** https://github.com/Data-Wise/claude-plugins/issues
-- **Documentation:** https://data-wise.github.io/claude-plugins/
-- **Monorepo:** https://github.com/Data-Wise/claude-plugins
+- **Issues:** https://github.com/Data-Wise/scholar/issues
+- **Repository:** https://github.com/Data-Wise/scholar
+- **Documentation:** See `docs/` directory for comprehensive guides
 
 ---
 
 ## Related Projects
 
-- **craft** - Full-stack developer toolkit (86 commands)
-- **rforge** - R package ecosystem orchestrator
-- **workflow** - ADHD-friendly workflow automation (deprecated, merged into craft)
-- **statistical-research** - Pure research plugin (deprecated, superseded by scholar)
+- **[craft](https://github.com/Data-Wise/craft)** - Full-stack developer toolkit (86 commands, 8 agents, 21 skills)
+- **[rforge](https://github.com/Data-Wise/claude-plugins/tree/main/rforge)** - R package ecosystem orchestrator with mode system
+- **[claude-plugins](https://github.com/Data-Wise/claude-plugins)** - Shared tooling and plugin development standards
+
+**Migration from older plugins:**
+- `workflow` → Merged into craft (v1.17.0)
+- `statistical-research` → Superseded by scholar (v1.0.0)
 
 ---
 
